@@ -4,20 +4,22 @@
 
 {% block body %}
 
-<nav><a class="nav-link" href="{{ url_for('show_all') }}">Back</a></nav>
+<nav>
+  <a class="nav-link" href="{{ url_for('show_all') }}">Back</a>
+</nav>
 <h4>Edit</h4>
-  <section class="content">
 
+<section class="content">
 
-<form method="post">
-  
+  <form method="post">
+
     <label for="exercise">Exercise</label>
     <input name="exercise" id="exercise"
       value="{{ request.form['exercise'] or one.exercise }}" required>
     
     <label for="notes">Notes</label>
     <textarea name="notes" id="notes">{{ request.form['notes'] or one.notes }}</textarea>
-   
+
     <input type="submit" value="Save">
   </form>
   <hr>

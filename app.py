@@ -63,7 +63,8 @@ class WorkoutForm(FlaskForm):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    user = User()
+    return render_template('index.html', user=user)
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -81,7 +82,8 @@ def login():
 @app.route('/dashboard', methods=['POST', 'GET'])
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    num = Workout.query.count()
+    return render_template('dashboard.html', num=num)
 
 
 @app.route('/logout', methods=['POST', 'GET'])
@@ -133,6 +135,7 @@ def show_all():
 # def get_one(id, check_user=True):
 #     one = Workout.query.get(id)
 #     return (one)
+
 
 @app.route('/<int:id>/update', methods=['GET', 'POST'])
 def update_workout(id):

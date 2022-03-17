@@ -4,5 +4,11 @@
 
 {% block body %}
 <h2>Welcome!</h2>
+<div>
+	{% if num %}
+	<p>Total workouts: <a href="{{ url_for('show_all') }}">{{num}}</a></p>
+	{% endif %}
+</div>
+
 <a href="{{ url_for('logout') }}">Logout</a>
 {% endblock body %}

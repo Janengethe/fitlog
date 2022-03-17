@@ -4,6 +4,12 @@
 
 {% block body %}
     <h4>FitLog</h4>
+    {% if user %}
+    <a href="{{ url_for('show_all') }}">Workouts</a><br>
+    <a href="{{ url_for('dashboard') }}">Home</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
     <a href="{{ url_for('login') }}">Log In</a><br>
     <a href="{{ url_for('register') }}">Sign Up</a>
+    {% endif %}
 {% endblock body %}

@@ -3,7 +3,8 @@
 {% block head %}<title>show all</title>{% endblock head %}
 
 {% block body %}
-<a href="/create">ADD</a>
+<a href="{{ url_for('dashboard') }}">Home</a>
+<a href="{{ url_for('create') }}">ADD</a>
 <br>
 <table>
   <thead>
@@ -21,23 +22,4 @@
   </tbody>
   {% endfor %}
 </table>
-<!-- <nav>
-  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-  <br>
-  
-  <nav><a class="nav-link" href="{{ url_for('create') }}">Add</a></nav>
-  
-</nav>
-<nav>
-  {% for n in new %}
-  <article class="new">
-    <header>
-      <div>
-           <div class="about">{{ new['exercise'] }}</div>
-          <p class="notes">{{ new['notes'] }}</p>
-      </div>
-    </header>
-  </article>
-  {% endfor %}
-</nav> -->
   {% endblock body %}
