@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}<title>FitLog</title>{% endblock head %}
+
+{% block body %}
+  <nav><a class="nav-link" href="{{ url_for('index') }}">Back</a></nav>
+ <h4>New Workout</h4>
+  <section class="content">
+<form method="post">
+    <label for="exercise">Exercise</label>
+    <input name="exercise" id="exercise" value="{{ request.form['exercise'] }}" required>
+    <label for="notes">Notes</label>
+    <textarea name="notes" id="notes">{{ request.form['notes'] }}</textarea>
+    <input type="submit" value="Save">
+  </form>
+</section>
+
+{% endblock body %}

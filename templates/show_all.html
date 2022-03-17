@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}<title>show all</title>{% endblock head %}
+
+{% block body %}
+<a href="/create">ADD</a>
+<br>
+<table>
+  <thead>
+    <th>Workout Id</th>
+    <th>Created At</th>
+    <th>Exercise</th>
+    <th>Notes</th>
+  </thead>
+  {% for data in new %}
+  <tbody>
+    <td>{{data.id}}</td>
+    <td>{{data.created_at.strftime('%d.%m.%y')}}</td>
+    <td><a href="{{ url_for('update_workout', id=data.id) }}">{{data.exercise}}</a></td>
+    <td>{{data.notes}}</td>
+  </tbody>
+  {% endfor %}
+</table>
+<!-- <nav>
+  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+  <br>
+  
+  <nav><a class="nav-link" href="{{ url_for('create') }}">Add</a></nav>
+  
+</nav>
+<nav>
+  {% for n in new %}
+  <article class="new">
+    <header>
+      <div>
+           <div class="about">{{ new['exercise'] }}</div>
+          <p class="notes">{{ new['notes'] }}</p>
+      </div>
+    </header>
+  </article>
+  {% endfor %}
+</nav> -->
+  {% endblock body %}

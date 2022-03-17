@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block head %}<title>FitLog</title>{% endblock head %}
+
+{% block body %}
+    <h4>FitLog</h4>
+    <a href="{{ url_for('login') }}">Log In</a><br>
+    <a href="{{ url_for('register') }}">Sign Up</a>
+{% endblock body %}
