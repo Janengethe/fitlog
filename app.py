@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from logging import raiseExceptions
 from flask import Flask, render_template, url_for, redirect, session, request
 from flask_sqlalchemy import SQLAlchemy
