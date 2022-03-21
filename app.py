@@ -63,7 +63,7 @@ class WorkoutForm(FlaskForm):
 
 @app.route('/')
 def index():
-    user = User()
+    user = current_user
     return render_template('index.html', user=user)
 
 
@@ -75,15 +75,17 @@ def login():
         if user:#if in db
             if bcrypt.check_password_hash(user.password, form.password.data):#check password hash and compare with provided
                 login_user(user)#if they match
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('index'))
     return render_template('login.html', form=form)
 
 
 @app.route('/dashboard', methods=['POST', 'GET'])
 @login_required
 def dashboard():
-    num = Workout.query.count()
-    return render_template('dashboard.html', num=num)
+    user = current_user
+    # user = User.query.filter_by(id=id).first()
+    num = Workout.query.filter_by(user_id=user.id).count()
+    return render_template('dashboard.html', user=user, num=num)
 
 
 @app.route('/logout', methods=['POST', 'GET'])
@@ -125,11 +127,13 @@ def create():
 @app.route('/show_all/')
 @login_required
 def show_all():
+    user = current_user
+    workout = Workout.query.filter_by(user_id=user.id).all()
     # user = User.query.filter_by(username=username).first_or_404()
     # return (user)
-    new = Workout.query.all()
-    print (new)
-    return render_template('show_all.html', new=new)
+    # new = Workout.query.all()
+    print (workout)
+    return render_template('show_all.html', user=user, workout=workout)
 
 
 # def get_one(id, check_user=True):

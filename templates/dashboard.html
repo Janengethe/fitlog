@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
-{% block head %}<title>Dashboard</title>{% endblock head %}
+{% block head %}<title>FitLog-Dashboard</title>{% endblock head %}
 
 {% block body %}
+
 <h2>Welcome!</h2>
 <div>
 	{% if num %}
 	<p>Total workouts: <a href="{{ url_for('show_all') }}">{{num}}</a></p>
+	{% else %}
+	<p>Total workouts: 0</p>
+	<div>
+		<p><a href="{{ url_for('create') }}">Create Now</a></p>
+	</div>
 	{% endif %}
 </div>
 

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block head %}<title>show all</title>{% endblock head %}
+{% block head %}<title>FitLog-show_all</title>{% endblock head %}
 
 {% block body %}
 <a href="{{ url_for('dashboard') }}">Home</a>
@@ -13,7 +13,7 @@
     <th>Exercise</th>
     <th>Notes</th>
   </thead>
-  {% for data in new %}
+  {% for data in workout %}
   <tbody>
     <td>{{data.id}}</td>
     <td>{{data.created_at.strftime('%d.%m.%y')}}</td>
