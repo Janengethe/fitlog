@@ -9,6 +9,7 @@ from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
 from datetime import datetime
+from sqlalchemy import desc
 
 
 app = Flask(__name__)#app instance
@@ -128,7 +129,7 @@ def create():
 @login_required
 def show_all():
     user = current_user
-    workout = Workout.query.filter_by(user_id=user.id).all()
+    workout = Workout.query.filter_by(user_id=user.id).order_by(desc('created_at')).all()
     # user = User.query.filter_by(username=username).first_or_404()
     # return (user)
     # new = Workout.query.all()

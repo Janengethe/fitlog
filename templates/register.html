@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
 
-{% block head %}<title>FitLog-sign_up</title>{% endblock head %}
+{% block head %}
+<title>FitLog-sign_up</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+
+
+{% endblock head %}
 
 {% block body %}
     <h4>Sign Up</h4>
+    <div>
     <form method="POST" action="">
         {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
+        {{ form.username }}<br>
+        {{ form.password }}<br>
         {{ form.submit }}
     </form>
+    </div>
+    <div>
     <p>Already have an account? <a href="{{ url_for('login') }}">Log In</a></p>
+    </div>
 {% endblock body %}
