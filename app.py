@@ -133,7 +133,7 @@ def show_all():
     # user = User.query.filter_by(username=username).first_or_404()
     # return (user)
     # new = Workout.query.all()
-    print (workout)
+    # print (workout)
     return render_template('show_all.html', user=user, workout=workout)
 
 

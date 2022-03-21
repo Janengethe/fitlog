@@ -3,7 +3,6 @@ html body {
 	padding-left: 10px;
 	padding-top: 10px;
 	font-family: monospace;
-	/*background: url(index.jpg) no-repeat center center fixed; */
 }
 
 h4 {
@@ -14,14 +13,12 @@ div p {
 	color: darkgray;
 }
 input[name=username] {
-  /*color: white;*/
   margin: 8px 0;
   border-radius: 4px;
   padding: 14px 20px;
 }
 
 input[name=password] {
-  /*color: white;*/
   margin: 8px 0;
   border-radius: 4px;
   padding: 14px 20px;
@@ -35,8 +32,4 @@ input[name=submit] {
   border: none;
   border-radius: 4px;
  
-}
-
-div p a {
-
 }

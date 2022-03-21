@@ -1,11 +1,29 @@
 {% extends 'base.html' %}
 
-{% block head %}<title>FitLog-show_all</title>{% endblock head %}
+{% block head %}
+<title>FitLog-show_all</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='show_all.css') }}">
+
+
+{% endblock head %}
 
 {% block body %}
-<a href="{{ url_for('dashboard') }}">Home</a>
-<a href="{{ url_for('create') }}">ADD</a>
-<br>
+<div>
+
+  <nav class="navbar navbar-expand-sm bg-light">
+
+    <h4>My FitLogs</h4>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard') }}">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('create') }}">Add</a></li>
+
+    </ul>
+  
+  </nav>
+
+</div>
+
 <table>
   <thead>
     <th>Workout Id</th>
@@ -22,4 +40,5 @@
   </tbody>
   {% endfor %}
 </table>
+
   {% endblock body %}

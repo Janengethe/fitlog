@@ -1,0 +1,12 @@
+html body {
+	background-color: cadetblue;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-family: monospace;
+}
+
+div h4 {
+	color: lawngreen;
+}

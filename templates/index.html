@@ -1,15 +1,49 @@
 {% extends 'base.html' %}
 
-{% block head %}<title>FitLog-/</title>{% endblock head %}
+{% block head %}
+<title>FitLog-/</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+{% endblock head %}
 
 {% block body %}
-    <h4>FitLog</h4>
-    {% if user %}
-    <a href="{{ url_for('show_all') }}">Workouts</a><br>
-    <a href="{{ url_for('dashboard') }}">Home</a><br>
-    <a href="{{ url_for('logout') }}">Logout</a>
-    {% else %}
-    <a href="{{ url_for('login') }}">Log In</a><br>
-    <a href="{{ url_for('register') }}">Sign Up</a>
-    {% endif %}
+<div>
+
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <h4>FitLog</h4>
+        <ul class="navbar-nav ml-auto">
+            {% if user %}
+
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('show_all') }}">Workouts</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard') }}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+
+            {% else %}
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Log In</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Sign Up</a></li>
+
+            {% endif %}
+
+        </ul>
+
+    </nav>
+
+    <article>
+
+        <header>
+
+            <div >
+
+                <h5><p>Log Your Everyday Workout!</p></h5>
+
+            </div>
+
+        </header>
+
+    </article>
+
+</div>
+    
 {% endblock body %}

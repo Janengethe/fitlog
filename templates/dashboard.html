@@ -1,20 +1,55 @@
 {% extends 'base.html' %}
 
-{% block head %}<title>FitLog-Dashboard</title>{% endblock head %}
+{% block head %}
+<title>FitLog-dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+{% endblock head %}
 
 {% block body %}
-
-<h2>Welcome!</h2>
 <div>
-	{% if num %}
-	<p>Total workouts: <a href="{{ url_for('show_all') }}">{{num}}</a></p>
-	{% else %}
-	<p>Total workouts: 0</p>
-	<div>
-		<p><a href="{{ url_for('create') }}">Create Now</a></p>
-	</div>
-	{% endif %}
-</div>
 
-<a href="{{ url_for('logout') }}">Logout</a>
+	<nav class="navbar navbar-expand-sm bg-light">
+		<h4>FitLog</h4>
+        <ul class="navbar-nav ml-auto">
+        	<li class="nav-item"><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+
+    </nav>
+
+    <article>
+
+    	<header>
+
+    		<div >
+            {% if num %}
+
+            <p>Total workouts: <a href="{{ url_for('show_all') }}">{{num}}</a></p>
+
+            {% else %}
+
+            <p>Total workouts: 0</p>
+
+            <div>
+            	<p><a href="{{ url_for('create') }}">Create Now</a></p>
+            </div>
+
+            {% endif %}
+
+            <h5><p>Log Your Everyday Workout!</p></h5>
+
+            </div>
+
+        </header>
+
+    </article>
+
+</div>
+    
 {% endblock body %}
+
+
+
+
+
