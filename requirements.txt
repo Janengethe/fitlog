@@ -108,7 +108,7 @@ systemd-python==234
 testresources==2.0.1
 
 
-unattended-upgrades==0.1
+
 urllib3==1.25.8
 usb-creator==0.3.7
 virtualenv==20.7.2
