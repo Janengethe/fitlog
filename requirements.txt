@@ -107,7 +107,7 @@ SQLAlchemy==1.4.22
 systemd-python==234
 testresources==2.0.1
 
-ufw==0.36
+
 unattended-upgrades==0.1
 urllib3==1.25.8
 usb-creator==0.3.7
