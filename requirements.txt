@@ -18,7 +18,6 @@ dbus-python==1.2.16
 
 distlib==0.3.2
 distro==1.4.0
-distro-info===0.23ubuntu1
 dnspython==2.2.0
 duplicity==0.8.12.0
 email-validator==1.1.3
