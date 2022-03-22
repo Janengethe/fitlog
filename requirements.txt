@@ -36,7 +36,7 @@ Flask-Mail==0.9.1
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.0.0
 future==0.18.2
-gpg===1.13.1-unknown
+
 greenlet==1.1.1
 gunicorn==20.1.0
 html5lib==1.0.1
