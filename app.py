@@ -251,4 +251,8 @@ def delete(id):
 
 
 if __name__ == "__main__":
+    """
+    To allow the code to run when
+    modules are imported
+    """
     app.run(debug=True)
