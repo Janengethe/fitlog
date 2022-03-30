@@ -11,9 +11,9 @@
 
 
 ### Installation
-*Clone the repo on the command line
-> `git clone git@github.com:Janengethe/fitlog.git`
-*Navigate to the virtual environment
-> `source venv/bin/activate`
-*Get the app running
-> `python3 -m app`
+Clone the repo on the command line
+* `git clone git@github.com:Janengethe/fitlog.git`
+Navigate to the virtual environment
+* `source venv/bin/activate`
+Get the app running
+* `python3 -m app`
