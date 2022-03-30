@@ -30,3 +30,20 @@ Get the app running
 
 #### Add Workout
 [![Add Workout](https://i.postimg.cc/wM41PN3g/Screenshot-from-2022-03-29-15-55-42.png)](https://postimg.cc/RJfCJNcD)
+
+
+### Contributing
+1. Fork the repo
+2. Clone it `git clone https://github.com/<your_username>/fitlog`
+3. Create new branch `git checkout -b <new_branch>`
+4. Make changes and test
+5. Commit changes and Pull Request with description of the changes you've made.
+
+### Related projects
+[Myfitlog](https://github.com/Janengethe/myfitlog)
+
+### Licensing
+None at the moment. Free to use.
+
+#### Author
+[Jane Ng'ethe](https://www.instagram.com/1jane_joseph/)
