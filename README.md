@@ -19,3 +19,12 @@ Navigate to the virtual environment
 
 Get the app running
 `python3 -m app`
+
+
+### Usage
+[![Sign Up Page](https://i.postimg.cc/mhWc3snG/Screenshot-from-2022-03-30-17-43-53.png)](https://postimg.cc/D8bY91gG)
+
+[![Log In Page](https://i.postimg.cc/yYf4SP3L/Screenshot-from-2022-03-29-16-00-27.png)](https://postimg.cc/D8bY91gG)
+
+
+[![Add Workout](https://i.postimg.cc/wM41PN3g/Screenshot-from-2022-03-29-15-55-42.png)](https://postimg.cc/RJfCJNcD)
